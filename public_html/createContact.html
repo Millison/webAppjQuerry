@@ -1,0 +1,92 @@
+<style>
+    .github-corner:hover 
+    .octo-arm{animation:octocat-wave 560ms ease-in-out}
+    @keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}
+    @media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}
+</style>
+<main class="container">
+
+    <a href="https://agindo.de" target="_blank" class="github-corner" aria-label="Agindo GmbH">
+        <img height="15" src="pix/agindo_logo.png" alt="Agindo GmbH">
+    </a>
+
+    <a href="https://appload.scopevisio.com/static/swagger/index.html#" target="_blank" aria-label="scopevisio swagger">
+        <img src="pix/scopevisio-logo-scroll.png" alt="scopevisio">
+    </a>
+    
+
+    <section id="radio_buttons" class="row">
+        <hr>
+        <h2>Craete new Contact</h2>
+        <div class="col col-5-of-12 v-center">
+
+            <h3>Person or Organisation</h3>
+
+            <div class="radio-group">
+                <input type="radio" name="person" class="formjs-sm" value="true">
+                <span>Person</span>
+
+                <input type="radio" name="person" class="formjs-sm" value="false">
+                <span>Organisation</span>
+            </div>
+
+        </div>
+        <div class="col col-7-of-12 v-center">
+            <h3>Salutation</h3>
+
+            <div class="radio-group">
+                <input type="radio" name="salutation" class="formjs-sm" value="Herr">
+                <span>Herr</span>
+
+                <input type="radio" name="salutation" class="formjs-sm" value="Frau">
+                <span>Frau</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="person_data" class="row">
+        <div class="col col-5-of-12 v-center">
+            <div>
+                <label class="input-label" for="error1">Firstname</label>
+                <input id="firstname" type="text" class="formjs formjs-error disableonfocus" placeholder="Firstname">
+            </div>
+            <div>
+                <label class="input-label" for="error2">Lastname</label>
+                <input id="lastname" type="text" class="formjs formjs-error disableonfocus" placeholder="Lastname">
+            </div>
+        </div>
+        <div class="col col-5-of-12 v-center">
+            <div>
+                <label class="input-label" for="error3">Phone</label>
+                <input id="phone" type="text" class="formjs formjs-error disableonfocus" placeholder="Phone">
+            </div>
+            <div>
+                <label class="input-label" for="error4">Mobile</label>
+                <input id="mobile" type="text" class="formjs formjs-error disableonfocus" placeholder="Mobile">
+            </div>
+        </div>
+    </section>
+
+    <section id="adress" class="row">
+        <div class="col col-5-of-12 v-center">
+            <div>
+                <label class="input-label" for="error5">Street</label>
+                <input id="street" type="text" class="formjs formjs-error disableonfocus" placeholder="Street">
+            </div>
+        </div>
+        <div class="col col-3-of-12 v-center inline-group">
+            <div>
+                <label class="input-label" for="error6">City</label>
+                <input id="city" type="text" class="formjs formjs-error disableonfocus" placeholder="City">
+            </div>
+        </div>
+        <div class="col col-2-of-12 v-center inline-group">
+            <div>
+                <label class="input-label" for="error7">Postcode</label>
+                <input id="postcode" type="text" class="formjs formjs-error disableonfocus" placeholder="Postcode">
+            </div>
+        </div>
+    </section>
+
+</main>
+<script type="text/javascript" src="js/routing.js"></script>
