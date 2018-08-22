@@ -4,18 +4,22 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
+<html ng-app="myApp">
     <head>
-        <title>TODO supply a title</title>
+        <title>Scopevisio - Mulilanguage</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" type="text/css" href="css/form/grid.css">
+        <link rel="stylesheet" type="text/css" href="css/form/formjs.css">
         <link rel="stylesheet" type="text/css" href="css/form/formjs.min.css">
+        <link rel="stylesheet" type="text/css" href="css/form/grid.css">
         <link rel="stylesheet" type="text/css" href="css/form/style.css">
-        <!-- <link rel="stylesheet" type="text/css" href="css/form/tabMenue.css"> -->
-
+        
         <link rel="stylesheet" type="text/css" href="css/basecss.css">
+        
+        <!-- <link rel="stylesheet" type="text/css" href="css/form/tabMenue.css"> -->
+        
+        <link rel="icon" href="https://agindo.de/wp-content/uploads/cropped-favicon-32x32.png" sizes="32x32" />
 
         <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
         <script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.js"></script>
@@ -27,10 +31,14 @@ and open the template in the editor.
         <script src="//ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script>
 
+        <script type="text/javascript" src="js/form_design/formjs.js"></script>
         <script type="text/javascript" src="js/form_design/formjs.min.js"></script>
-        <script type="text/javascript" src="js/form_design/tooltip.js"></script>
         <script type="text/javascript" src="js/form_design/script.js"></script>
-
+        <script type="text/javascript" src="js/form_design/tooltip.js"></script>
+        
+        <script type="text/javascript" src="js/language.js"></script>
+        <script type="text/javascript" src="js/indexCtrl.js"></script>
+        
         <script type="text/javascript">
             WebFont.load({
                 google: {
@@ -40,7 +48,7 @@ and open the template in the editor.
 	</script>
 
     </head>
-    <body ng-app="myApp" ng-controller="myCtrl">
+    <body ng-controller="myCtrl">
 
         <style>
             .github-corner:hover 
@@ -48,7 +56,7 @@ and open the template in the editor.
             @keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}
             @media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}
         </style>
-        <script type="text/javascript" src="js/loginController.js"></script>
+        
         <main class="container">
 
             <!--
@@ -69,13 +77,13 @@ and open the template in the editor.
                 <hr>
                 <div class="col col-1-of-2 v-center center-block">
                     <p align="center">
-                        <a href="https://www.scopevisio.com/impressum">Impressum</a>
+                        <a id="imprint" href="https://www.scopevisio.com/impressum">Impressum</a>
                         |
-                        <a href="https://www.scopevisio.com/datenschutzrichtlinie">Datenschutzrichtlinie</a>
+                        <a id="privacyPolicy" href="https://www.scopevisio.com/datenschutzrichtlinie">Datenschutzrichtlinie</a>
                         |
-                        <a href="https://www.scopevisio.com/rechtliches">Rechtliches</a>
+                        <a id="legal" href="https://www.scopevisio.com/rechtliches">Rechtliches</a>
                         |
-                        <a href="https://www.scopevisio.com/sitemap">Sitemap</a>
+                        <a id="sitemap" href="https://www.scopevisio.com/sitemap">Sitemap</a>
                     </p>
                     <p align="center">
                         <img src="pix/scopevisio-logo-hellblau.png" alt="Cloud Unternehmenssoftware" width="200">
@@ -90,10 +98,7 @@ and open the template in the editor.
             <div id="content">{{content}}</div>
         </div> -->
         <script type="text/javascript" src="js/routing.js"></script>
-        <script type="text/javascript" src="js/loginController.js"></script>
-        <script type="text/javascript">
-            //var rout = new Routing();
-	</script>
+        
 
     </body>
 </html>

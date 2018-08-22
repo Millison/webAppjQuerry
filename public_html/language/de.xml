@@ -7,11 +7,39 @@ and open the template in the editor.
 
 
 <root>
+    <indexHTML>
+        <title>TODO supply a title</title>
+        <imprint>Impressum</imprint>
+        <privacyPolicy>Datenschutzrichtlinie</privacyPolicy>
+        <legal>Rechtliches</legal>
+        <sitemap>Sitemap</sitemap>
+    </indexHTML>
     <loginContent>
-        <customer>Kundennummer</customer>
-        <username>Benutzername</username>
-        <password>Passwort</password>
+        <formLabel>
+            <customerLbl>Kundennummer</customerLbl>
+            <usernameLbl>Benutzername</usernameLbl>
+            <passwordLbl>Passwort</passwordLbl>
+        </formLabel>
+        <errorLabel>
+            <customerLblError>
+                <customEmpty>Bitte geben Sie Ihre Kundennummer ein!</customEmpty>
+                <customNotEmpty>Es müssen nur Ziffern sein!</customNotEmpty>
+            </customerLblError>
+            <usernameLblError>
+                <userEmpty>Bitte geben Sie Ihr Benutzername ein!</userEmpty>
+                <userNotEmpty>Es ist keine gültige E-Mail-Adresse!</userNotEmpty>
+            </usernameLblError>                
+            <passwordLblError>Bitte geben Sie Ihr Passwort ein!</passwordLblError>
+        </errorLabel>
+        <button>Einlogen</button>
     </loginContent>
+    <startContent>
+        <headerTitle>Willkommen</headerTitle>
+        <abstract>Mein Scopevisio</abstract>
+        <createNewContactBtn>Neuen Kontakt erstellen</createNewContactBtn>
+        <getContactByIdBtn>Kontakt anzeigen</getContactByIdBtn>
+        <logoutBtn>Auslogen</logoutBtn>
+    </startContent>
     <token>
         
     </token>
@@ -20,5 +48,5 @@ and open the template in the editor.
     </contcts>
     <getContctById>
         
-    </getContctById>
+    </getContctById>    
 </root>

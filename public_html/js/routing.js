@@ -10,50 +10,7 @@
  * document.getElementsByTagName('head').innerHTML = '<phad>'; */
 
 
-function Routing() {
-    
-    function goToIndex() {
-        
-    };
-    
-    function goToLogin() {
-        $('#content').load('login.html');
-    };
-    
-    function goToStart() {
-        $('#content').load('start.html');
-    };
-}
-
-var rout = new Routing();
-
-function goToStart() {
-        $('#content').load('start.html');
-    };
-
-// '.click' muss hier raus!
-function toLogin($scope) {
-    /*$.ajax({
-     url: "loginForm.html",
-     cache: false,
-     success: function (html) {
-     $("#content").html(html);
-     }
-     });*/
-    /*
-    $('head').show(
-            $.ajax({
-                url: "loginHeader.html",
-                cache: false,
-                success: function (html) {
-                    $("head").html(html);
-                }
-            })
-            );
-    */
-    //$('head').load("loginHeader.html");
-    
-    
+function toLogin() {
     $('#content').load('login.html');
 }
 
@@ -61,32 +18,41 @@ function toStart() {
     $('#content').load('start.html');
 }
 
-var app = angular.module('myApp', [])
+function toCreatContact() {
+    $('#content').load('createContact.html');
+}
+
+function toGetContact() {
+    $('#content').load('getContact.html');
+}
+
+var rout = function () {
+    return {
+        goToIndex: function () {
+
+        },
+        goToLogin: function () {
+            $('#content').load('login.html');
+        },
+        goToStart: function () {
+            $('#content').load('start.html');
+        }
+    }
+}
+
+var routInstanz = angular.module('app.rout', [])
+        .factory("rout", rout);
+;
+
+/* Beim Reload wird der Konnektor erneut definiertund somit auch die Login-Seite
+ * aufgerufen.
+ * Es ist sehr schlecht!
+ * 'toLogin()' soll nur einmal am Anfang gemacht werden.
+ * Atueller Kontent soll im SESION gespeichert werden,
+ * z.B.: 'start.html' und beim Reload, dies als phad genommen werden!
+ * 
+ * var pfadToPage = SESSION[0];
+ * goToContent($pfadToPage) */
+var app = angular.module('myApp', ['app.rout'])
         .controller('myCtrl', toLogin)
         ;
-
-/* Ok   FUNKTIONIERT
- var app = angular.module('myApp', []);
- app.controller('myCtrl', function ($scope) {
- $.ajax({
- url: "loginForm.html",
- cache: false,
- success: function (html) {
- $("#content").html(html);
- }
- });
- });
- */
-
-/*
- var app = angular.module('myApp', []);
- app.controller('myCtrl', function ($scope, $http) {
- $http.get("loginForm.htm")
- .then(function (response) {
- $scope.content = response.data;
- });
- });
- */
-
-
-

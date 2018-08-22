@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<root>
+    <indexHTML>
+        <title>TODO supply a title</title>
+        <imprint>Imprint</imprint>
+        <privacyPolicy>Privacy Policy</privacyPolicy>
+        <legal>Legal</legal>
+        <sitemap>Sitemap</sitemap>
+    </indexHTML>
+    <loginContent>
+        <formLabel>
+            <customerLbl>Customer ID</customerLbl>
+            <usernameLbl>Username</usernameLbl>
+            <passwordLbl>Passwort</passwordLbl>
+        </formLabel>
+        <errorLabel>
+            <customerLblError>
+                <empty>Please enter your customer number!</empty>
+                <notEmpty>It only has to be numbers!</notEmpty>
+            </customerLblError>
+            <usernameLblError>
+                <empty>Please enter your username!</empty>
+                <notEmpty>It is not a valid e-mail address!</notEmpty>
+            </usernameLblError>                
+            <passwordLblError>Please enter your password!</passwordLblError>
+        </errorLabel>
+        <button>Log in</button>
+    </loginContent>
+    <startContent>
+        <headerTitle>Welcome</headerTitle>
+        <abstract>My Scopevisio</abstract>
+        <createNewContactBtn>Create a new contact</createNewContactBtn>
+        <getContactByIdBtn>Show contact</getContactByIdBtn>
+        <logoutBtn>Log out</logoutBtn>
+    </startContent>
+    <token>
+        
+    </token>
+    <contcts>
+        
+    </contcts>
+    <getContctById>
+        
+    </getContctById>
+</root>

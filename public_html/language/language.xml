@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<root>
+    <de>
+        <indexHTML>
+            <title>TODO supply a title</title>
+            <imprint>Impressum</imprint>
+            <privacyPolicy>Datenschutzrichtlinie</privacyPolicy>
+            <legal>Rechtliches</legal>
+            <sitemap>Sitemap</sitemap>
+        </indexHTML>
+        <loginContent>
+            <formLabel>
+                <customerLbl>Kundennummer</customerLbl>
+                <usernameLbl>Benutzername</usernameLbl>
+                <passwordLbl>Passwort</passwordLbl>
+            </formLabel>
+            <errorLabel>
+                <customerLblError>
+                    <customEmpty>Bitte geben Sie Ihre Kundennummer ein!</customEmpty>
+                    <customNotEmpty>Es müssen nur Ziffern sein!</customNotEmpty>
+                </customerLblError>
+                <usernameLblError>
+                    <userEmpty>Bitte geben Sie Ihr Benutzername ein!</userEmpty>
+                    <userNotEmpty>Es ist keine gültige E-Mail-Adresse!</userNotEmpty>
+                </usernameLblError>                
+                <passwordLblError>Bitte geben Sie Ihr Passwort ein!</passwordLblError>
+            </errorLabel>
+            <button>Einlogen</button>
+        </loginContent>
+        <startContent>
+            <headerTitle>Willkommen</headerTitle>
+            <abstract>Mein Scopevisio</abstract>
+            <createNewContactBtn>Neuen Kontakt erstellen</createNewContactBtn>
+            <getContactByIdBtn>Kontakt anzeigen</getContactByIdBtn>
+            <logoutBtn>Auslogen</logoutBtn>
+        </startContent>
+        <token>
+        
+        </token>
+        <contcts>
+        
+        </contcts>
+        <getContctById>
+        
+        </getContctById>
+    </de>
+    <en>
+        <indexHTML>
+            <title>TODO supply a title</title>
+            <imprint>Imprint</imprint>
+            <privacyPolicy>Privacy Policy</privacyPolicy>
+            <legal>Legal</legal>
+            <sitemap>Sitemap</sitemap>
+        </indexHTML>
+        <loginContent>
+            <formLabel>
+                <customerLbl>Customer ID</customerLbl>
+                <usernameLbl>Username</usernameLbl>
+                <passwordLbl>Passwort</passwordLbl>
+            </formLabel>
+            <errorLabel>
+                <customerLblError>
+                    <empty>Please enter your customer number!</empty>
+                    <notEmpty>It only has to be numbers!</notEmpty>
+                </customerLblError>
+                <usernameLblError>
+                    <empty>Please enter your username!</empty>
+                    <notEmpty>It is not a valid e-mail address!</notEmpty>
+                </usernameLblError>                
+                <passwordLblError>Please enter your password!</passwordLblError>
+            </errorLabel>
+            <button>Log in</button>
+        </loginContent>
+        <startContent>
+            <headerTitle>Welcome</headerTitle>
+            <abstract>My Scopevisio</abstract>
+            <createNewContactBtn>Create a new contact</createNewContactBtn>
+            <getContactByIdBtn>Show contact</getContactByIdBtn>
+            <logoutBtn>Log out</logoutBtn>
+        </startContent>
+        <token>
+        
+        </token>
+        <contcts>
+        
+        </contcts>
+        <getContctById>
+        
+        </getContctById>
+    </en>
+    <fr>
+        <indexHTML>
+            <title>TODO supply a title</title>
+            <imprint>Imprint</imprint>
+            <privacyPolicy>Privacy Policy</privacyPolicy>
+            <legal>Legal</legal>
+            <sitemap>Sitemap</sitemap>
+        </indexHTML>
+        <loginContent>
+            <formLabel>
+                <customerLbl>Customer ID</customerLbl>
+                <usernameLbl>Username</usernameLbl>
+                <passwordLbl>Passwort</passwordLbl>
+            </formLabel>
+            <errorLabel>
+                <customerLblError>
+                    <empty>Please enter your customer number!</empty>
+                    <notEmpty>It only has to be numbers!</notEmpty>
+                </customerLblError>
+                <usernameLblError>
+                    <empty>Please enter your username!</empty>
+                    <notEmpty>It is not a valid e-mail address!</notEmpty>
+                </usernameLblError>                
+                <passwordLblError>Please enter your password!</passwordLblError>
+            </errorLabel>
+            <button>Log in</button>
+        </loginContent>
+        <startContent>
+            <headerTitle>Welcome</headerTitle>
+            <abstract>My Scopevisio</abstract>
+            <createNewContactBtn>Create a new contact</createNewContactBtn>
+            <getContactByIdBtn>Show contact</getContactByIdBtn>
+            <logoutBtn>Log out</logoutBtn>
+        </startContent>
+        <token>
+        
+        </token>
+        <contcts>
+        
+        </contcts>
+        <getContctById>
+        
+        </getContctById>
+    </fr>
+</root>
