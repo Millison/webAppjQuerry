@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 
-var xmlCont;
 
 $(function () {
     console.log(sessionStorage.getItem('content'));
@@ -30,12 +29,8 @@ $(function () {
     });
 });
 
-function createContact() {
-    $.getScript('routing.js', toCreatContact());
-}
-
-function getContactById() {
-    $.getScript('routing.js', toGetContact());
+function toStart() {
+    $.getScript('routing.js', toStart());
 }
 
 function logout() {

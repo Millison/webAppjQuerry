@@ -3,21 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 var xmlCont;
 var tokens = new Array(3);
 
 /*
  * Folgendes ausprobieren:
  * $.get("data.xml", function(data) {
-      var myData = 
-         data.getElementsByTagName('data')[0].firstChild.nodeValue;
-
-      $("#insert").click(function() {
-         $('#data').append(myData).show('slow');
-      });
-   });
+ var myData = 
+ data.getElementsByTagName('data')[0].firstChild.nodeValue;
+ 
+ $("#insert").click(function() {
+ $('#data').append(myData).show('slow');
+ });
+ });
  */
 $(function () {
+    console.log(sessionStorage.getItem('content'));
     var browserLanguage = navigator.language.charAt(0) + navigator.language.charAt(1);
     //var xmlUrl = "language/" + browserLanguage + ".xml";
     $.ajax({
@@ -40,7 +42,24 @@ $(function () {
 });
 
 
-
+/* Response Status empfange:
+ * $.ajax({
+ url: "/echo/xml/",
+ type: "POST",
+ data: {
+ //Set an empty response to see the error
+ xml: "<response></response>"   
+ },
+ dataType:"text xml",
+ success: function(xml, textStatus, xhr) {
+ console.log(arguments);
+ console.log(xhr.status);
+ },
+ complete: function(xhr, textStatus) {
+ console.log(xhr.status);
+ } 
+ });
+ */
 function login() {
     var formValues = validateForm();
     var settings = {
@@ -56,7 +75,16 @@ function login() {
             "grant_type": "password",
             "customer": formValues[0],
             "username": formValues[1],
-            "password": formValues[2]
+            "password": formValues[2],
+            xml: "<response></response>"
+        },
+        dataType: "text xml",
+        success: function (xml, textStatus, xhr) {
+            console.log(arguments);
+            console.log(xhr.status);
+        },
+        complete: function (xhr, textStatus) {
+            console.log(xhr.status);
         }
     };
     //console.log("Login-Func");
@@ -102,14 +130,14 @@ function validateForm() {
 ;
 
 function token($settings) {
-    //console.log("Login-Func");
-    //$.getScript('routing.js', toStart());
+    console.log("Login-Func");
+    $.getScript('routing.js', toStart());
     $.ajax($settings).done(function (response) {
         if (response.access_token !== '' && response.refresh_token !== '') {
             tokens[0] = response.token_type;
             tokens[1] = response.access_token;
             tokens[2] = response.refresh_token;
-            //console.log(tokens[1]);
+            console.log(tokens[1]);
             $.getScript('routing.js', toStart());
         } else {
             alert("Server reagiert nicht!\n\n" +

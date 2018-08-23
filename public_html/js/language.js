@@ -22,7 +22,7 @@ $(function () {
             });
         },
         error: function () {
-            alert('ERROR');
+            alert('ERROR language.ja');
         }
     });
 });

@@ -32,7 +32,7 @@ and open the template in the editor.
                 </usernameLblError>                
                 <passwordLblError>Bitte geben Sie Ihr Passwort ein!</passwordLblError>
             </errorLabel>
-            <button>Einlogen</button>
+            <button>Einloggen</button>
         </loginContent>
         <startContent>
             <headerTitle>Willkommen</headerTitle>
@@ -44,9 +44,41 @@ and open the template in the editor.
         <token>
         
         </token>
-        <contcts>
-        
-        </contcts>
+        <creatContcts>
+            <personContakt>
+                <salutation>Anrede</salutation>
+                <title>Titel</title>
+                <firstname>Vorname</firstname>
+                <lastname>Nachname</lastname>
+                <post>Position</post>
+                <address>Adresse</address>
+                
+                <employer>Arbeitgeber</employer>
+                <phone>Telefon</phone>
+                <mobile>Mobil</mobile>
+                <email>E-Mail</email>
+            </personContakt>
+            <companyContact>
+                <company>
+                    <userType>Personenart</userType>
+                    <masterID>Master ID</masterID>
+                    <companyName>Name der Gesellschaft</companyName>
+                </company>
+                <address>
+                    <generalAddress>Hauptadresse</generalAddress>
+                    <billingAddress>Rechnungsadresse</billingAddress>
+                    <street>Straße und Hausnummer</street>
+                    <postcode>PLZ</postcode>
+                    <city>Ort</city>
+                    <country>Land</country>
+                </address>
+                <branche>Branche</branche>
+                
+                <taxNumber>Steuernummer</taxNumber>
+                <phone>Telefon</phone>
+                <email>E-Mail</email>
+            </companyContact>
+        </creatContcts>
         <getContctById>
         
         </getContctById>
