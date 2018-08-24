@@ -11,6 +11,7 @@
 
 
 function toLogin() {
+    sessionStorage.clear();
     sessionStorage.setItem('content', 'login.html');
     $('#content').load('login.html');
 }
@@ -25,14 +26,54 @@ function toCreatContact() {
     $('#content').load('createContact.html');
 }
 
+function toCreatPersonContact() {
+    sessionStorage.setItem('content', '#.html');
+    $('#content').load('#.html');
+}
+
+function toCreatComüpanyContact() {
+    sessionStorage.setItem('content', '#.html');
+    $('#content').load('#.html');
+}
+
+function toEditContact() {
+    sessionStorage.setItem('content', '#.html');
+    $('#content').load('#.html');
+}
+
+function toEditPersonContact() {
+    sessionStorage.setItem('content', '#.html');
+    $('#content').load('#.html');
+}
+
+function toEditComüpanyContact() {
+    sessionStorage.setItem('content', '#.html');
+    $('#content').load('#.html');
+}
+
 function toGetContact() {
     sessionStorage.setItem('content', 'getContact.html');
     $('#content').load('getContact.html');
 }
 
+function toCreatOffer() {
+    sessionStorage.setItem('content', '#.html');
+    $('#content').load('#.html');
+}
+
+function toEditOffer() {
+    sessionStorage.setItem('content', '#.html');
+    $('#content').load('#.html');
+}
+
+function toGetOffer() {
+    sessionStorage.setItem('content', '#.html');
+    $('#content').load('#.html');
+}
+
 function callContent() {
-    //var index = "index.html";
-    //var page = pageContent.localeCompare('index.html');
+    var browserLanguage = navigator.language.charAt(0) + navigator.language.charAt(1);
+    sessionStorage.setItem('language', browserLanguage);
     var cont = sessionStorage.getItem('content');
     if (cont != null) {
         var page = cont.localeCompare('index.html');
@@ -46,42 +87,9 @@ function callContent() {
         sessionStorage.setItem('content', 'login.html');
         $('#content').load('login.html');
     }
-
     //console.log(cont);
-    //var page = cont.localeCompare('index.html');
-
-    console.log(cont);
 }
 
-/*
- var rout = function () {
- return {
- goToIndex: function () {
- 
- },
- goToLogin: function () {
- $('#content').load('login.html');
- },
- goToStart: function () {
- $('#content').load('start.html');
- }
- }
- }
- 
- var routInstanz = angular.module('app.rout', [])
- .factory("rout", rout);
- ;
- */
-
-/* Beim Reload wird der Konnektor erneut definiertund somit auch die Login-Seite
- * aufgerufen.
- * Es ist sehr schlecht!
- * 'toLogin()' soll nur einmal am Anfang gemacht werden.
- * Atueller Kontent soll im SESION gespeichert werden,
- * z.B.: 'start.html' und beim Reload, dies als phad genommen werden!
- * 
- * var pfadToPage = SESSION[0];
- * goToContent($pfadToPage) */
 var app = angular.module('myApp', [])
         //.controller('myCtrl', toLogin)
         .controller('myCtrl', callContent)

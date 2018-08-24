@@ -76,15 +76,6 @@ function login() {
             "customer": formValues[0],
             "username": formValues[1],
             "password": formValues[2],
-            xml: "<response></response>"
-        },
-        dataType: "text xml",
-        success: function (xml, textStatus, xhr) {
-            console.log(arguments);
-            console.log(xhr.status);
-        },
-        complete: function (xhr, textStatus) {
-            console.log(xhr.status);
         }
     };
     //console.log("Login-Func");
@@ -130,14 +121,15 @@ function validateForm() {
 ;
 
 function token($settings) {
-    console.log("Login-Func");
-    $.getScript('routing.js', toStart());
     $.ajax($settings).done(function (response) {
         if (response.access_token !== '' && response.refresh_token !== '') {
-            tokens[0] = response.token_type;
-            tokens[1] = response.access_token;
-            tokens[2] = response.refresh_token;
-            console.log(tokens[1]);
+            console.log("Login-Func");
+            sessionStorage.setItem('token_type', response.token_type);
+            sessionStorage.setItem('access_token', response.access_token);
+            sessionStorage.setItem('refresh_token', response.refresh_token);
+            //tokens[0] = response.token_type;
+            //tokens[1] = response.access_token;
+            //tokens[2] = response.refresh_token;
             $.getScript('routing.js', toStart());
         } else {
             alert("Server reagiert nicht!\n\n" +

@@ -46,42 +46,97 @@ and open the template in the editor.
         </token>
         <creatContcts>
             <personContakt>
+                <area>Person</area>
                 <salutation>Anrede</salutation>
                 <title>Titel</title>
                 <firstname>Vorname</firstname>
                 <lastname>Nachname</lastname>
                 <post>Position</post>
-                <address>Adresse</address>
-                
                 <employer>Arbeitgeber</employer>
+                <sex>Geschlecht</sex>
+                <customFields>
+                    <area>Benutzerdefinierte Felder</area>
+                    <fieldOne>Position ac. Business card</fieldOne>
+                    <fieldTwo>Kissmetrics Mail Adress</fieldTwo>
+                </customFields>
+            </personContakt>
+            <companyContact>
+                <area>Gesellschaft</area>
+                <userType>Personenart</userType>
+                <masterID>Master ID</masterID>
+                <companyName>Name der Gesellschaft</companyName>
+                <formOfOrganization>Rechtsform</formOfOrganization>
+                <taxNumber>Steuernummer</taxNumber>
+                <workers>Arbeitnehmer der Gesellschaft</workers>
+                <debitor>
+                    <area>Debitor</area>
+                    <termsOfPayment>Zahlungsbedingung</termsOfPayment>
+                    <paymentMethod>Zahlungsart</paymentMethod>
+                    <creditLimit>Kreditlimit</creditLimit>
+                </debitor>
+                <accountNumber>Kontonummer</accountNumber>
+                <debitorNumberRange>Debitoren-Nummernkreis</debitorNumberRange>
+            </companyContact>
+            <branche>Branche</branche>
+            <contactOwner>Kontakt Inhaber</contactOwner>
+            <address>
+                <generalAddress>Hauptadresse</generalAddress>
+                <billingAddress>Rechnungsadresse</billingAddress>
+                <deliveryAddress>Lieferadresse</deliveryAddress>
+                <street>Straße und Hausnummer</street>
+                <postcode>PLZ</postcode>
+                <city>Ort</city>
+                <country>Land</country>
+            </address>
+            <communication>
                 <phone>Telefon</phone>
                 <mobile>Mobil</mobile>
                 <email>E-Mail</email>
-            </personContakt>
-            <companyContact>
-                <company>
-                    <userType>Personenart</userType>
-                    <masterID>Master ID</masterID>
-                    <companyName>Name der Gesellschaft</companyName>
-                </company>
-                <address>
-                    <generalAddress>Hauptadresse</generalAddress>
-                    <billingAddress>Rechnungsadresse</billingAddress>
-                    <street>Straße und Hausnummer</street>
-                    <postcode>PLZ</postcode>
-                    <city>Ort</city>
-                    <country>Land</country>
-                </address>
-                <branche>Branche</branche>
-                
-                <taxNumber>Steuernummer</taxNumber>
-                <phone>Telefon</phone>
-                <email>E-Mail</email>
-            </companyContact>
+            </communication>
+            <webservice>
+                <website></website>
+            </webservice>
         </creatContcts>
         <getContctById>
         
         </getContctById>
+        <offer>
+            <prospect>Interessent</prospect>
+            <counterpart>Ansprechpartner</counterpart>
+            <designationOffer>Bezeichnung Angebot</designationOffer>
+            <descriptionOffer>Beschreibung Angebot</descriptionOffer>
+            <offerEditor>Angebotsbearbeiter</offerEditor>
+            <offerPhase>Angebotsphase</offerPhase>
+            <offerStatus>Angebotsstatus</offerStatus>
+            <offerChance>Verkaufswahrscheinlichkeit</offerChance>
+            
+            <decision>Entscheidung</decision>
+            <positions>
+                <area>Positionen</area>
+                <productNumber>Produktnr.</productNumber>
+                <label>Bezeichnung</label>
+                <amount>Menge</amount>
+                <description>Beschreibung</description>
+                <unit>Einheit</unit>
+                <unitPriceGross>Einzelpreis brutto</unitPriceGross>
+                <tax>Steuer</tax>
+                <discount>Rabatt</discount>
+                <unitPriceNet>Einzelpreis netto</unitPriceNet>
+            </positions>
+            <add>Hinzufügen</add>
+            <remove>Entfernen</remove>
+            <duplicate>Duplizieren</duplicate>
+            <print>Drucken/Dokumentenlayouts</print>
+            <rework>Nachbearbeiten</rework>
+            <save>Speichern</save>
+            <voucherText>
+                <area>Belegtext</area>
+                <title>Titel</title>
+                <subtitle>Untertitel</subtitle>
+                <introduction>Einleitungstext</introduction>
+            </voucherText>
+            <shipping>Versand</shipping>
+        </offer>
     </de>
     <en>
         <indexHTML>
